@@ -26,6 +26,6 @@ lazy val commonSettings = Seq(
 
     "org.specs2"                  %% "specs2-scalacheck"          % "4.0.1"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.8"         % Test,
-    "com.github.alexarchambault"  %% "scalacheck-shapeless_1.13"  % "1.1.6"       % Test
+    "com.github.alexarchambault"  %% "scalacheck-shapeless_1.13"  % "1.1.8"       % Test
   )
 )
