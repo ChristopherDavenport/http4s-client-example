@@ -24,7 +24,7 @@ lazy val commonSettings = Seq(
    "org.http4s"                  %% "http4s-blaze-server"        % "0.18.21",
    "org.http4s"                  %% "http4s-blaze-client"        % "0.18.21",
 
-    "org.specs2"                  %% "specs2-scalacheck"          % "4.0.5"       % Test,
+    "org.specs2"                  %% "specs2-scalacheck"          % "4.3.5"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.8"         % Test,
     "com.github.alexarchambault"  %% "scalacheck-shapeless_1.13"  % "1.1.8"       % Test
   )
