@@ -20,9 +20,9 @@ lazy val commonSettings = Seq(
   addCompilerPlugin("org.spire-math" % "kind-projector" % "0.9.10" cross CrossVersion.binary),
 
   libraryDependencies ++= Seq(
-   "org.http4s"                  %% "http4s-dsl"                 % "0.18.23",
-   "org.http4s"                  %% "http4s-blaze-server"        % "0.18.23",
-   "org.http4s"                  %% "http4s-blaze-client"        % "0.18.23",
+   "org.http4s"                  %% "http4s-dsl"                 % "0.18.24",
+   "org.http4s"                  %% "http4s-blaze-server"        % "0.18.24",
+   "org.http4s"                  %% "http4s-blaze-client"        % "0.18.24",
 
     "org.specs2"                  %% "specs2-scalacheck"          % "4.6.0"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.11.1"         % Test,
