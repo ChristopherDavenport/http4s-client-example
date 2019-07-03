@@ -9,6 +9,7 @@ lazy val `http4s-client-example` = project.in(file("."))
 \***********************************************************************/
 
 val http4sV = "0.20.3"
+val circeV = "0.11.1"
 
 
 lazy val commonSettings = Seq(
@@ -23,6 +24,8 @@ lazy val commonSettings = Seq(
     "org.http4s"                  %% "http4s-dsl"                 % http4sV,
     "org.http4s"                  %% "http4s-blaze-server"        % http4sV,
     "org.http4s"                  %% "http4s-blaze-client"        % http4sV,
+    "org.http4s"                  %% "http4s-circe"               % http4sV,
+    "io.circe"                    %% "circe-generic"              % circeV,
 
     "org.specs2"                  %% "specs2-scalacheck"          % "4.6.0"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.11.1"         % Test,

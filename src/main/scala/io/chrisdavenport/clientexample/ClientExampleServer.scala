@@ -5,8 +5,8 @@ import org.http4s.client.blaze.BlazeClientBuilder
 import org.http4s.dsl._
 import org.http4s._
 import org.http4s.implicits._
-import org.http4s.client._
 import cats.effect._
+import cats.implicits._
 import fs2._
 import scala.concurrent.ExecutionContext.global
 
@@ -15,22 +15,21 @@ object ClientExampleServer {
         for {
             _ <- Stream.eval(Sync[F].delay(println("Starting Client")))
             client <- Stream.resource(BlazeClientBuilder[F](global).resource)
-
-            service = getGoogleService[F](client)
+            jokes = Jokes.impl(client)
+            service = getDadJoke[F](jokes)
             exitCode <- BlazeServerBuilder[F].bindHttp(8080, "0.0.0.0")
                 .withHttpApp(service.orNotFound)
                 .serve
         } yield exitCode
 
 
-    def getGoogleService[F[_]: Effect](c: Client[F]): HttpRoutes[F] = {
-        val _ = c
+    def getDadJoke[F[_]: Effect](j: Jokes[F]): HttpRoutes[F] = {
         val dsl = new Http4sDsl[F]{}
         import dsl._
 
         HttpRoutes.of[F]{
-            case GET -> Root / "google" => 
-                Ok()
+            case GET -> Root / "joke" => 
+                j.get.flatMap(Ok(_))
         }
 
     }
