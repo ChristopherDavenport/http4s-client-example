@@ -8,21 +8,24 @@ lazy val `http4s-client-example` = project.in(file("."))
                       Boilerplate below these lines
 \***********************************************************************/
 
-
+val http4sV = "0.20.3"
+val circeV = "0.11.1"
 
 
 lazy val commonSettings = Seq(
   organization := "io.chrisdavenport",
   licenses += ("MIT", url("https://opensource.org/licenses/MIT")),
 
-  scalaVersion := "2.12.4",
+  scalaVersion := "2.12.8",
 
-  addCompilerPlugin("org.spire-math" % "kind-projector" % "0.9.10" cross CrossVersion.binary),
+  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.10.3" cross CrossVersion.binary),
 
   libraryDependencies ++= Seq(
-   "org.http4s"                  %% "http4s-dsl"                 % "0.18.24",
-   "org.http4s"                  %% "http4s-blaze-server"        % "0.18.24",
-   "org.http4s"                  %% "http4s-blaze-client"        % "0.18.24",
+    "org.http4s"                  %% "http4s-dsl"                 % http4sV,
+    "org.http4s"                  %% "http4s-blaze-server"        % http4sV,
+    "org.http4s"                  %% "http4s-blaze-client"        % http4sV,
+    "org.http4s"                  %% "http4s-circe"               % http4sV,
+    "io.circe"                    %% "circe-generic"              % circeV,
 
     "org.specs2"                  %% "specs2-scalacheck"          % "4.6.0"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.11.1"         % Test,

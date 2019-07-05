@@ -1,9 +1,10 @@
 package io.chrisdavenport.clientexample
+import cats.effect._
+import cats.implicits._
 
-object Main {
+object Main extends IOApp {
 
-  def main(args: Array[String]): Unit = {
-    println("I am a new project!")
-  }
+  override def run(args: List[String]) =
+    ClientExampleServer.serve[IO].compile.drain.as(ExitCode.Success)
 
 }
