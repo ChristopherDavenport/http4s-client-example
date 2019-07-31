@@ -2,7 +2,7 @@ sudo: false
 language: scala
 
 scala:
-  - 2.12.4
+  - 2.12.8
 
 before_cache:
   - find $HOME/.sbt -name "*.lock" -type f -delete
