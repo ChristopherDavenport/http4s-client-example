@@ -9,7 +9,7 @@ lazy val `http4s-client-example` = project.in(file("."))
 \***********************************************************************/
 
 val http4sV = "0.20.10"
-val circeV = "0.11.1"
+val circeV = "0.12.1"
 
 
 lazy val commonSettings = Seq(
