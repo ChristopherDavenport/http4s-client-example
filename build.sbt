@@ -8,8 +8,8 @@ lazy val `http4s-client-example` = project.in(file("."))
                       Boilerplate below these lines
 \***********************************************************************/
 
-val http4sV = "0.20.11"
-val circeV = "0.12.3"
+val http4sV = "0.20.12"
+val circeV = "0.11.1"
 
 
 lazy val commonSettings = Seq(
