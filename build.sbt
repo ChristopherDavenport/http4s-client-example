@@ -8,8 +8,8 @@ lazy val `http4s-client-example` = project.in(file("."))
                       Boilerplate below these lines
 \***********************************************************************/
 
-val http4sV = "0.20.10"
-val circeV = "0.11.1"
+val http4sV = "0.20.14"
+val circeV = "0.11.2"
 
 
 lazy val commonSettings = Seq(
@@ -27,7 +27,7 @@ lazy val commonSettings = Seq(
     "org.http4s"                  %% "http4s-circe"               % http4sV,
     "io.circe"                    %% "circe-generic"              % circeV,
 
-    "org.specs2"                  %% "specs2-scalacheck"          % "4.7.0"       % Test,
+    "org.specs2"                  %% "specs2-scalacheck"          % "4.7.1"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.11.1"         % Test,
     "com.github.alexarchambault"  %% "scalacheck-shapeless_1.13"  % "1.1.8"       % Test
   )
