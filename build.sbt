@@ -27,7 +27,7 @@ lazy val commonSettings = Seq(
     "org.http4s"                  %% "http4s-circe"               % http4sV,
     "io.circe"                    %% "circe-generic"              % circeV,
 
-    "org.specs2"                  %% "specs2-scalacheck"          % "4.7.1"       % Test,
+    "org.specs2"                  %% "specs2-scalacheck"          % "4.9.3"       % Test,
     "org.typelevel"               %% "discipline"                 % "0.11.1"         % Test,
     "com.github.alexarchambault"  %% "scalacheck-shapeless_1.13"  % "1.1.8"       % Test
   )
